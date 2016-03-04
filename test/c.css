@@ -1,0 +1,84 @@
+p {
+	font-size:12px;
+}
+/* 这是注释*/
+.dreamdublue {
+	color:blue;
+}
+
+.dreamdu18px {
+	font-size:18px;
+	
+}
+
+#dreamdured {
+	color:red;
+	opacity: 0.4;
+}
+/*
+.loginbg2 {
+	width: 100%;
+	height: 475px;
+
+	background-color: #febf00;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	cursor: url(glo.cur),default;
+	margin-top: 5%;
+}
+.from {
+	background-color: #febf00;
+	background-image: url(bg.jpg);
+}
+*/
+body {
+  width: 70px;
+  margin: 10px;
+  padding: 5px;
+}
+input[type="text"], input[type="password"] {
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+.bodybg {
+	margin: 10% 0px 10% 0px;
+	background-color: #10f7e5;
+	width: 100%;
+	height:100%;
+	position: absolute;
+	z-index: 1;
+}
+.divbody {
+	background-image: url(bg.jpg);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	background-repeat: no-repeat;
+}
+.loginbg2 {
+	position: relative;
+    z-index: 4;
+    width: 306px;
+    background: #fff;
+    padding: 20px;
+    overflow: visible;
+    float: right;
+    margin-right: 200px;
+    margin-top: 100px;
+    top:40px;
+}
+.login {
+	margin-bottom: 5px;
+}
+.password {
+	margin-top: 5px;
+}
+.loginbutton {
+	width:260px;
+	height: 30px;
+	margin-top: 20px;
+	font-family: "Microsoft YaHei"
+}

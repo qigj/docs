@@ -6,8 +6,8 @@
 删除系统自带mysql相关软件
 yum remove mysql-libs
 安装mysql依赖包，创建相关用户及目录
-tar zxvf mysql-5.5.20.tar.gz
-cd mysql-5.5.20
+tar zxvf mysql-5.7.11.tar.gz
+cd mysql-5.7.11
 yum install cmake ncurses-devel gcc gcc-c++ bison
 mkdir -p /usr/local/mysql
 mkdir -p /data/mysql
@@ -39,13 +39,15 @@ mv boost_1_59_0 /usr/local/boost
 -DMYSQL_TCP_PORT=3306
 #make
 #make install
-#cp support-files/my-medium.cnf /etc/my.cnf
+#cp support-files/my-default.cnf /etc/my.cnf
 
 #初始化数据库
-#chmod 755 scripts/mysql_install_db
-#./scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/ --datadir=/data/mysql/
+#scripts/mysql_install_db 此脚本已经废弃，使用mysqld,命令执行完会随机生成一个root用户的密码
+#/usr/local/mysql/bin/mysqld --user=mysql --basedir=/usr/local/mysql/ --datadir=/data/mysql/ --initialize
 #cp support-files/mysql.server /etc/init.d/mysqld
 #chmod 755 /etc/init.d/mysqld
 #chkconfig mysqld on
 #service mysqld start
+#mysql5.7不更改root密码，没法使用,使用mysqladmin命令回车使用上文初始化生成的密码：
+/usr/local/mysql/bin/mysqladmin -u root password "newpass" -p
 ```

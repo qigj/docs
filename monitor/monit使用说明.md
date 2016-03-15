@@ -124,7 +124,5 @@ check process sshd with pidfile /var/run/sshd.pid
 
 //这例子“alert aaa@baidu.com”就会覆盖前面提到的“set alert”中的参数，报警的话只发送给aaa@baiducom
 //检查pid文件，如果不存在就
-
-
-
+更多实例请参考:<https://mmonit.com/monit/documentation/monit.html#CONFIGURATION-EXAMPLES>
 ```

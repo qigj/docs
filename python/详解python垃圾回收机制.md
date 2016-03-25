@@ -31,3 +31,5 @@ Python默认的垃圾收集机制是“引用计数”，每个对象维护了�
 
 分代回收同样作为Python的辅助垃圾收集技术处理那些容器对象。
 
+参考:<http://www.pythontab.com/html/2016/pythonhexinbiancheng_0223/1006.html>
+

@@ -440,12 +440,9 @@ APR即Apache Portable Runtime，原来是apache2的一个库，后来被独立�
 # echo "/usr/local/apr/lib/" > /etc/ld.so.conf.d/apr.conf
 # ldconfig
 
-
 应用程序：
 jforum
 java center home
-
-
 
 
 

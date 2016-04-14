@@ -32,10 +32,25 @@ yum install samba
 #### Add the "hrs" for custom
 ```
 [hrs]
-        comment = hrs
-        path = /home/hrsdata
-        write list = hrsadmin
-        read list = hrsguest
+    comment = hrs
+    path = /home/hrsdata
+    write list = hrsadmin,@hrsadmin
+    read list = hrsguest,@hrsadmin
+    writable = yes
+    #上传文件权限为775
+    create mask = 0775
+    #上次目录权限设置为775
+    directory mask = 0775
+    #上传文件的属主为hrsadmin
+    force user = hrsadmin
+    #上传文件的属组为hrsadmin
+    force group = hrsadmin
+
+[HR]
+        comment = HR
+        path = /home/HR
+        write list = HR
+        read list = HR
         writable = yes
 
 ```

@@ -1,12 +1,12 @@
-#centos 6��װphp 5.2.17 
-## �Ȱ�װ������
+#centos 6安装php 5.2.17 
+## 先安装基础库
 
 
 ```shell
 yum install epel-release
 ```
 
-�޸��ļ���/etc/yum.repos.d/epel.repo���� ��baseurl��ע��ȡ���� mirrorlistע�͵���
+修改文件“/etc/yum.repos.d/epel.repo”， 将baseurl的注释取消， mirrorlist注释掉。
 
 ```shell
 yum clean all
@@ -22,7 +22,7 @@ bzip2-devel \
 ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel \
 krb5 krb5-devel libidn libidn-devel openssl openssl-devel mysql mysql-devel
 ```
-##Ϊ�˱�֤����php��ʱ�򲻻���ʾ�Ҳ�����ذ���ֱ��ִ����������
+##为了保证编译php的时候不会提示找不到相关包，直接执行如下命令
 ```shell
 ln -s /usr/lib64/libjpeg.so /usr/lib/libjpeg.so
 ln -s /usr/lib64/libpng.so /usr/lib/libpng.so
@@ -34,7 +34,7 @@ ln -s /usr/lib64/mysql/libmysqlclient.so.16 /usr/lib/libmysqlclient.so.16
 ln -s /usr/lib64/mysql/libmysqlclient.so.16.0.0 /usr/lib/libmysqlclient.so.16.0.0
 ```
 
-##��ѹ�ļ�
+##解压文件
 ```shell
 cd /usr/local/src
 wget http://museum.php.net/php5/php-5.2.17.tar.gz
@@ -42,14 +42,14 @@ wget http://php-fpm.org/downloads/php-5.2.17-fpm-0.5.14.diff.gz
 tar zvxf php-5.2.17.tar.gz
 ```
 
-## �򲹶��ķ�ʽ��װphp-fpm
+## 打补丁的方式安装php-fpm
 
 ```shell
 shell >gzip -cd php-5.2.17-fpm-0.5.14.diff.gz | sudo patch -d php-5.2.17 -p1
 shell > cd php-5.2.17
 ```
 
-##���밲װ
+##编译安装
 ```shell
 shell >
 ./configure --prefix=/usr/local/php \
@@ -84,9 +84,9 @@ shell >
 shell > make
 shell > make  install
 ```
-##����php.ini Ŀ¼
-`����php.ini�ļ���php.ini-disk��Դ���������
-Ϊʲô��Ҫ/usr/local/php/etc/ ���Ŀ¼ʱ������ʱ��ѡ��--with-config-file-path������
+##配置php.ini 目录
+`复制php.ini文件，php.ini-disk在源代码包里面
+为什么需要/usr/local/php/etc/ 这个目录时候编译的时候，选项--with-config-file-path决定的
 `
 
 ```shell

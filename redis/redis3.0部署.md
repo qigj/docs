@@ -38,8 +38,9 @@ cp redis-3.0.7/utils/redis_init_script /etc/init.d/redis
 #chkconfig --add redis
 ```
 #编辑/etc/init.d/redis,修改redis相关安装位置即可
-#vim /etc/init.d/redis
+
 ```
+#vim /etc/init.d/redis
 REDISPORT=6379  
 EXEC=/usr/local/redis/bin/redis-server  
 CLIEXEC=/usr/local/redis/bin/redis-cli  

@@ -18,9 +18,9 @@
 ```
 
 把下面的可执行文件拷贝到redis的安装位置(本例为/usr/local/bin/redis)即可
-#ls -F| sed -n '/\*$/'p
 
 ```
+#ls -F| sed -n '/\*$/'p
 mkreleasehdr.sh*
 redis-benchmark*
 redis-check-aof*
